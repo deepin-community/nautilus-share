@@ -1,0 +1,22 @@
+Source: nautilus-share
+Section: gnome
+Priority: optional
+Maintainer: Chow Loong Jin <hyperair@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-autoreconf,
+               intltool (>= 0.29),
+               libnautilus-extension-dev (>= 2.10.0)
+Standards-Version: 3.9.6
+
+Package: nautilus-share
+Architecture: any
+Depends: nautilus (>= 2.10),
+         samba-common (>= 3.0.27a),
+         samba-common-bin | samba-common (<< 2:3.4.0~pre2-1~0),
+         gnome-session-bin,
+         ${shlibs:Depends}, ${misc:Depends}
+Enhances: nautilus
+Suggests: samba (>= 3.0.27a)
+Description: Nautilus extension to share folder using Samba
+ Nautilus Share allows you to quickly share a folder from
+ the GNOME Nautilus file manager without requiring root access.
